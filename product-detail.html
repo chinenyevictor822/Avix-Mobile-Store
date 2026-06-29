@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile — Product Details</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 📦 PRODUCT DETAIL                        -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 40px 0;">
+        <div class="product-detail-wrapper" id="productDetailWrapper">
+            
+            <!-- Left: Image Gallery with 3D Rotation -->
+            <div class="gallery">
+                <div id="productImageContainer" style="cursor: grab; position: relative;">
+                    <div class="main-image">
+                        <img id="productImage" src="" alt="Product Image" />
+                    </div>
+                </div>
+                <p class="rotation-hint">↔️ Drag the image to rotate it 360°</p>
+                <!-- Thumbnails (optional) -->
+                <div style="display: flex; gap: 12px; margin-top: 16px; justify-content: center;">
+                    <button class="btn-outline" onclick="resetRotation()" style="font-size: 13px; padding: 6px 16px;">↺ Reset View</button>
+                </div>
+            </div>
+            
+            <!-- Right: Product Info -->
+            <div class="info">
+                <span class="brand-name" id="productBrand">Brand</span>
+                <h1 id="productName">Product Name</h1>
+                
+                <!-- Rating -->
+                <div style="margin: 8px 0 16px;">
+                    <span id="productStars">⭐⭐⭐⭐⭐</span>
+                    <span style="color: var(--text-secondary); font-size: 14px; margin-left: 8px;" id="productRating">(4.5)</span>
+                </div>
+                
+                <!-- Pricing -->
+                <div class="pricing">
+                    <span class="sale" id="productPrice">₦0</span>
+                    <span class="original" id="productOriginalPrice">₦0</span>
+                </div>
+                
+                <!-- Condition Badge -->
+                <div style="margin: 12px 0;">
+                    <span id="productConditionBadge" class="badge badge-new">NEW</span>
+                    <span id="productGradeBadge" style="display: none;" class="badge badge-grade-a">Grade A</span>
+                </div>
+                
+                <!-- Description -->
+                <p class="description" id="productDescription">Loading product details...</p>
+                
+                <!-- Delivery / Pickup Toggle -->
+                <div class="delivery-toggle">
+                    <button id="pickupToggle" class="active" onclick="setDeliveryOption('pickup')">📍 Pickup</button>
+                    <button id="deliveryToggle" onclick="setDeliveryOption('delivery')">🚚 Delivery (₦2,000)</button>
+                </div>
+                
+                <!-- Add to Cart Button -->
+                <button class="btn-primary" id="addToCartBtn" style="width: 100%; justify-content: center; font-size: 18px; padding: 16px;">
+                    🛒 Add to Cart
+                </button>
+                
+                <!-- Back to Shop -->
+                <a href="shop.html" style="display: inline-block; margin-top: 16px; color: var(--text-secondary);">
+                    ← Back to Shop
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/3d-rotation.js"></script>
+
+    <!-- Product Detail Page Specific JavaScript -->
+    <script>
+        // ============================================
+        // PRODUCT DETAIL - LOAD PRODUCT FROM URL
+        // ============================================
+
+        let currentProduct = null;
+        let selectedDelivery = 'pickup'; // 'pickup' or 'delivery'
+
+        // Get product ID from URL parameter
+        function getProductIdFromURL() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id');
+            return id ? parseInt(id) : null;
+        }
+
+        // Load product details and render page
+        function loadProductDetail() {
+            const productId = getProductIdFromURL();
+            if (!productId) {
+                document.querySelector('.product-detail-wrapper').innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                        <span style="font-size: 48px;">❌</span>
+                        <h2>Product not found</h2>
+                        <p>No product ID provided in the URL.</p>
+                        <a href="shop.html" class="btn-primary" style="margin-top: 20px;">Go to Shop</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Find product in the products array
+            const product = getProductById(productId);
+            if (!product) {
+                document.querySelector('.product-detail-wrapper').innerHTML = `
+                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px;">
+                        <span style="font-size: 48px;">🔍</span>
+                        <h2>Product not found</h2>
+                        <p>We couldn't find the product you're looking for.</p>
+                        <a href="shop.html" class="btn-primary" style="margin-top: 20px;">Go to Shop</a>
+                    </div>
+                `;
+                return;
+            }
+
+            currentProduct = product;
+            
+            // Populate the page with product data
+            document.getElementById('productName').textContent = product.name;
+            document.getElementById('productBrand').textContent = product.brand;
+            document.getElementById('productDescription').textContent = product.description;
+            
+            // Price
+            document.getElementById('productPrice').textContent = formatPrice(product.price);
+            document.getElementById('productOriginalPrice').textContent = formatPrice(product.originalPrice);
+            
+            // Rating
+            document.getElementById('productStars').textContent = getStars(product.rating);
+            document.getElementById('productRating').textContent = `(${product.rating.toFixed(1)})`;
+            
+            // Condition badge
+            const conditionBadge = document.getElementById('productConditionBadge');
+            const gradeBadge = document.getElementById('productGradeBadge');
+            
+            if (product.condition === 'new') {
+                conditionBadge.textContent = 'NEW';
+                conditionBadge.className = 'badge badge-new';
+                gradeBadge.style.display = 'none';
+            } else {
+                conditionBadge.textContent = 'REFURBISHED';
+                conditionBadge.className = 'badge badge-refurbished';
+                gradeBadge.style.display = 'inline-block';
+                gradeBadge.textContent = `Grade ${product.grade || 'A'}`;
+                gradeBadge.className = `badge badge-grade-${(product.grade || 'a').toLowerCase()}`;
+            }
+            
+            // Set image for 3D rotation
+            const productImage = document.getElementById('productImage');
+            if (productImage) {
+                productImage.src = product.image;
+                productImage.alt = product.name;
+            }
+            
+            // Update page title
+            document.title = `${product.name} — Avix Mobile`;
+            
+            console.log('📱 Product loaded:', product.name);
+        }
+
+        // ============================================
+        // DELIVERY TOGGLE
+        // ============================================
+
+        function setDeliveryOption(option) {
+            selectedDelivery = option;
+            const pickupBtn = document.getElementById('pickupToggle');
+            const deliveryBtn = document.getElementById('deliveryToggle');
+            
+            if (option === 'pickup') {
+                pickupBtn.classList.add('active');
+                deliveryBtn.classList.remove('active');
+            } else {
+                deliveryBtn.classList.add('active');
+                pickupBtn.classList.remove('active');
+            }
+        }
+
+        // ============================================
+        // ADD TO CART (with delivery option)
+        // ============================================
+
+        function addCurrentProductToCart() {
+            if (!currentProduct) return;
+            
+            // Add to cart with default quantity 1
+            addToCart(currentProduct.id, 1);
+            
+            // Update delivery option for this item
+            updateDeliveryOption(currentProduct.id, selectedDelivery);
+            
+            alert(`✅ ${currentProduct.name} added to cart!`);
+            updateCartCount();
+        }
+
+        // ============================================
+        // INITIALIZE
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart
+            loadCart();
+            updateCartCount();
+            
+            // Load product
+            loadProductDetail();
+            
+            // Setup Add to Cart button
+            document.getElementById('addToCartBtn').addEventListener('click', addCurrentProductToCart);
+            
+            // Hamburger menu
+            document.getElementById('hamburger')?.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.toggle('open');
+            });
+            
+            // Note: 3D rotation is automatically set up by 3d-rotation.js
+            // It will look for #productImageContainer and #productImage
+            console.log('📄 Product detail page ready');
+        });
+
+        // Make functions globally available
+        window.setDeliveryOption = setDeliveryOption;
+        window.addCurrentProductToCart = addCurrentProductToCart;
+    </script>
+
+</body>
+</html>

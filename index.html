@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile Accessories — Premium Phones & Accessories</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+            <!-- ========================================= -->
+            <!-- 🎨 AVIX LOGO (Brand Colors)              -->
+            <!-- Black bg, Orange "AVIX", White "I"       -->
+            <!-- Orange "MOBILE" underneath               -->
+            <!-- ========================================= -->
+            <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            
+            <!-- Right Side Actions -->
+            <div class="nav-actions">
+                <!-- Dark Mode Toggle -->
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">
+                    🌙
+                </button>
+                
+                <!-- Cart Icon -->
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                
+                <!-- Hamburger Menu (for mobile) -->
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 🏠 HERO SECTION                         -->
+    <!-- ========================================= -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>
+                    Premium Phones &<br />
+                    <span>Accessories</span> in Port Harcourt
+                </h1>
+                <p>
+                    Shop new and refurbished Tecno, Itel, Redmi, Samsung phones,
+                    plus accessories like chargers, screen guards, cases, and more.
+                    🇳🇬 Delivering across Port Harcourt.
+                </p>
+                <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+                    <a href="shop.html" class="btn-primary">🛍️ Shop Now</a>
+                    <a href="services.html" class="btn-secondary">🔧 Repair Services</a>
+                </div>
+                <div class="hero-badges">
+                    <span>✅ 50+ Products</span>
+                    <span>⭐ 4.5+ Ratings</span>
+                    <span>🚚 Delivery in PH</span>
+                    <span>📍 Pickup Available</span>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img 
+                    src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600&h=400&fit=crop" 
+                    alt="Avix Mobile Accessories - Phones and Accessories"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 🔥 FEATURED PRODUCTS                    -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 40px 0;">
+        <div class="section-header">
+            <h2>🔥 Featured Products</h2>
+            <a href="shop.html">View All →</a>
+        </div>
+        
+        <!-- Product Grid -->
+        <div class="product-grid" id="featuredProducts">
+            <!-- Products will be loaded here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📊 BRANDS SECTION                       -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 40px 0; text-align: center;">
+        <h2 style="margin-bottom: 32px;">📍 Brands We Sell</h2>
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; font-size: 24px; font-weight: 700;">
+            <span style="color: #1A73E8;">🔵 Tecno</span>
+            <span style="color: #34A853;">🟢 Itel</span>
+            <span style="color: #FF6B00;">🟠 Redmi</span>
+            <span style="color: #1428A0;">🔵 Samsung</span>
+            <span style="color: var(--brand-orange);">🟡 Avix Accessories</span>
+        </div>
+        <p style="color: var(--text-secondary); margin-top: 16px;">
+            All brands come with warranty. Refurbished phones are fully tested.
+        </p>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📋 QUICK LINKS TO SERVICES              -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 40px 0;">
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+            <div style="background: var(--bg-secondary); padding: 32px; border-radius: 16px; text-align: center; transition: var(--transition); border: 1px solid var(--border);">
+                <div style="font-size: 48px;">📱</div>
+                <h3 style="margin: 12px 0 8px;">New Phones</h3>
+                <p style="color: var(--text-secondary); font-size: 14px;">
+                    Latest models from all brands
+                </p>
+            </div>
+            <div style="background: var(--bg-secondary); padding: 32px; border-radius: 16px; text-align: center; transition: var(--transition); border: 1px solid var(--border);">
+                <div style="font-size: 48px;">♻️</div>
+                <h3 style="margin: 12px 0 8px;">Refurbished</h3>
+                <p style="color: var(--text-secondary); font-size: 14px;">
+                    Grade A, B, C — fully tested
+                </p>
+            </div>
+            <div style="background: var(--bg-secondary); padding: 32px; border-radius: 16px; text-align: center; transition: var(--transition); border: 1px solid var(--border);">
+                <div style="font-size: 48px;">🔧</div>
+                <h3 style="margin: 12px 0 8px;">Repairs</h3>
+                <p style="color: var(--text-secondary); font-size: 14px;">
+                    Battery, screen, charger fixes
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📍 LOCATION & DELIVERY INFO             -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 40px 0; text-align: center;">
+        <div style="background: var(--bg-secondary); border-radius: 16px; padding: 40px; border: 1px solid var(--border);">
+            <h2>📍 We're in Port Harcourt</h2>
+            <p style="color: var(--text-secondary); max-width: 500px; margin: 12px auto 24px;">
+                Visit our store or get your order delivered right to your door.
+                We serve all areas within Port Harcourt.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                <div>
+                    <span style="font-size: 28px;">🏪</span>
+                    <p style="font-weight: 600;">Pickup</p>
+                    <p style="font-size: 13px; color: var(--text-secondary);">
+                        Avix Mobile Accessories<br />
+                        Port Harcourt, Rivers State
+                    </p>
+                </div>
+                <div>
+                    <span style="font-size: 28px;">🚚</span>
+                    <p style="font-weight: 600;">Delivery</p>
+                    <p style="font-size: 13px; color: var(--text-secondary);">
+                        Same-day delivery<br />
+                        Within Port Harcourt
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+    
+    <!-- Homepage specific JavaScript -->
+    <script>
+        // Load featured products on homepage
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get featured products (first 8)
+            const featured = getFeaturedProducts();
+            const grid = document.getElementById('featuredProducts');
+            
+            if (grid) {
+                grid.innerHTML = '';
+                featured.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card fade-up';
+                    card.innerHTML = `
+                        <div class="image-wrapper">
+                            <img src="${product.image}" alt="${product.name}" />
+                            ${product.condition === 'new' 
+                                ? '<span class="badge badge-new">NEW</span>'
+                                : `<span class="badge badge-refurbished">REFURBISHED</span>`
+                            }
+                        </div>
+                        <div class="info">
+                            <div class="brand">${product.brand}</div>
+                            <h3>${product.name}</h3>
+                            <div class="pricing">
+                                <span class="sale">${formatPrice(product.price)}</span>
+                                <span class="original">${formatPrice(product.originalPrice)}</span>
+                            </div>
+                            <button class="add-btn" onclick="addToCartAndAlert(${product.id})">
+                                Add to Cart 🛒
+                            </button>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+            
+            // Update cart count
+            updateCartCount();
+        });
+        
+        // Helper function for Add to Cart with alert
+        function addToCartAndAlert(productId) {
+            addToCart(productId);
+            alert('✅ Added to Cart!');
+            updateCartCount();
+        }
+        
+        // Hamburger menu for mobile
+        document.getElementById('hamburger')?.addEventListener('click', function() {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>

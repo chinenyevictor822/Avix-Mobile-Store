@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile — Shopping Cart</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+           <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 📄 PAGE HEADER                          -->
+    <!-- ========================================= -->
+    <section class="container page-header">
+        <h1>🛒 Your Shopping Cart</h1>
+        <p>Review your items and choose pickup or delivery</p>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 🚚 DELIVERY TOGGLE (for all items)       -->
+    <!-- ========================================= -->
+    <section class="container" style="margin-top: -16px;">
+        <div style="background: var(--bg-secondary); border-radius: 12px; padding: 20px; border: 1px solid var(--border);">
+            <p style="font-weight: 600; margin-bottom: 12px;">📦 Delivery Preference:</p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button id="pickupToggle" class="btn-primary" style="flex: 1; justify-content: center; background: var(--brand-orange);" onclick="toggleDeliveryForAll('pickup')">
+                    📍 Pickup (Free)
+                </button>
+                <button id="deliveryToggle" class="btn-secondary" style="flex: 1; justify-content: center;" onclick="toggleDeliveryForAll('delivery')">
+                    🚚 Delivery (₦2,000)
+                </button>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary); margin-top: 8px;">
+                💡 Choose delivery for all items, or select per item below.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📦 CART ITEMS                            -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 20px 0;">
+        
+        <!-- Empty Cart Message -->
+        <div id="cartEmpty" style="display: none; text-align: center; padding: 60px 20px;">
+            <span style="font-size: 64px;">🛒</span>
+            <h2 style="margin: 16px 0 8px;">Your cart is empty</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+                Looks like you haven't added any products yet.
+            </p>
+            <a href="shop.html" class="btn-primary">🛍️ Start Shopping</a>
+        </div>
+        
+        <!-- Cart Items Container -->
+        <div id="cartItemsContainer">
+            <!-- Items will be rendered here by JavaScript -->
+        </div>
+        
+        <!-- Cart Summary -->
+        <div id="cartSummary" style="display: none;">
+            <div class="cart-summary">
+                <div class="row">
+                    <span>Subtotal</span>
+                    <span id="cartTotal">₦0</span>
+                </div>
+                <div class="row">
+                    <span>🚚 Delivery Fee</span>
+                    <span id="deliveryFee">₦0</span>
+                </div>
+                <div class="row" style="border-bottom: none; font-weight: 700;">
+                    <span>Total</span>
+                    <span id="finalTotal" style="font-size: 24px; color: var(--brand-orange);">₦0</span>
+                </div>
+                <button id="checkoutBtn" class="btn-primary" style="width: 100%; justify-content: center; margin-top: 20px; font-size: 18px; padding: 16px;">
+                    ✅ Proceed to Checkout
+                </button>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+
+    <!-- Cart Page Specific JavaScript -->
+    <script>
+        // ============================================
+        // CART PAGE - RENDER AND UPDATE
+        // ============================================
+
+        // The renderCartPage() function is already defined in cart.js
+        // We just need to make sure it runs when the page loads.
+        // We also need to set up the global delivery toggle buttons.
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart from localStorage
+            loadCart();
+            updateCartCount();
+            
+            // Render the cart page
+            renderCartPage();
+            
+            // Setup delivery toggle buttons (global)
+            const pickupBtn = document.getElementById('pickupToggle');
+            const deliveryBtn = document.getElementById('deliveryToggle');
+            
+            // Remove any existing event listeners and add new ones
+            if (pickupBtn) {
+                pickupBtn.replaceWith(pickupBtn.cloneNode(true));
+                document.getElementById('pickupToggle').addEventListener('click', function() {
+                    toggleDeliveryForAll('pickup');
+                });
+            }
+            
+            if (deliveryBtn) {
+                deliveryBtn.replaceWith(deliveryBtn.cloneNode(true));
+                document.getElementById('deliveryToggle').addEventListener('click', function() {
+                    toggleDeliveryForAll('delivery');
+                });
+            }
+            
+            // Setup checkout button
+            const checkoutBtn = document.getElementById('checkoutBtn');
+            if (checkoutBtn) {
+                checkoutBtn.replaceWith(checkoutBtn.cloneNode(true));
+                document.getElementById('checkoutBtn').addEventListener('click', function() {
+                    proceedToCheckout();
+                });
+            }
+            
+            // Hamburger menu
+            document.getElementById('hamburger')?.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.toggle('open');
+            });
+            
+            console.log('🛒 Cart page loaded!');
+        });
+
+        // Override renderCartPage to add per-item delivery toggle (optional)
+        // The renderCartPage in cart.js already handles everything.
+        // We just need to make sure the toggle buttons call the correct functions.
+
+        // Make sure functions are globally accessible
+        window.toggleDeliveryForAll = toggleDeliveryForAll;
+        window.proceedToCheckout = proceedToCheckout;
+        window.renderCartPage = renderCartPage;
+    </script>
+
+</body>
+</html>

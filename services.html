@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile — Repair Services</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+           <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 📄 PAGE HEADER                          -->
+    <!-- ========================================= -->
+    <section class="container page-header">
+        <h1>🔧 Repair Services</h1>
+        <p>Professional repairs for phones, laptops, and accessories</p>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 💡 SERVICES GRID                        -->
+    <!-- ========================================= -->
+    <section class="container">
+        <div class="services-grid">
+            <!-- Service 1: Phone Repair -->
+            <div class="service-card fade-up">
+                <div class="icon">📱</div>
+                <h3>Phone Repair</h3>
+                <p>Screen replacement, battery change, charging port fix, water damage repair.</p>
+                <span style="display: inline-block; background: var(--brand-orange); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-top: 8px;">
+                    From ₦5,000
+                </span>
+            </div>
+            
+            <!-- Service 2: Laptop Repair -->
+            <div class="service-card fade-up" style="animation-delay: 0.1s;">
+                <div class="icon">💻</div>
+                <h3>Laptop Repair</h3>
+                <p>Battery replacement, charger fix, keyboard repair, software installation, screen fix.</p>
+                <span style="display: inline-block; background: var(--brand-orange); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-top: 8px;">
+                    From ₦10,000
+                </span>
+            </div>
+            
+            <!-- Service 3: Accessory Fix -->
+            <div class="service-card fade-up" style="animation-delay: 0.2s;">
+                <div class="icon">🎧</div>
+                <h3>Accessory Repair</h3>
+                <p>Earphone fix, charger cable repair, power bank battery replacement.</p>
+                <span style="display: inline-block; background: var(--brand-orange); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-top: 8px;">
+                    From ₦3,000
+                </span>
+            </div>
+            
+            <!-- Service 4: Screen Guard Installation -->
+            <div class="service-card fade-up" style="animation-delay: 0.3s;">
+                <div class="icon">🛡️</div>
+                <h3>Screen Guard Installation</h3>
+                <p>Professional application of tempered glass and privacy screen guards.</p>
+                <span style="display: inline-block; background: var(--brand-orange); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-top: 8px;">
+                    From ₦2,000
+                </span>
+            </div>
+            
+            <!-- Service 5: Data Recovery -->
+            <div class="service-card fade-up" style="animation-delay: 0.4s;">
+                <div class="icon">💾</div>
+                <h3>Data Recovery</h3>
+                <p>Recover lost photos, contacts, messages from damaged phones and storage devices.</p>
+                <span style="display: inline-block; background: var(--brand-orange); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-top: 8px;">
+                    From ₦8,000
+                </span>
+            </div>
+            
+            <!-- Service 6: Software Update -->
+            <div class="service-card fade-up" style="animation-delay: 0.5s;">
+                <div class="icon">📲</div>
+                <h3>Software Update & Setup</h3>
+                <p>OS updates, app installation, phone setup, and troubleshooting.</p>
+                <span style="display: inline-block; background: var(--brand-orange); color: #fff; padding: 4px 16px; border-radius: 50px; font-size: 13px; font-weight: 600; margin-top: 8px;">
+                    From ₦3,000
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📝 BOOKING FORM                         -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 40px 0 60px;">
+        <div style="background: var(--bg-secondary); border-radius: 16px; padding: 40px; border: 1px solid var(--border); max-width: 700px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 8px;">📅 Book a Repair</h2>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 32px;">
+                Fill in the form below and we'll get back to you within 24 hours.
+            </p>
+            
+            <form id="serviceBookingForm" onsubmit="bookService(event)">
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="serviceName">Full Name *</label>
+                    <input type="text" id="serviceName" placeholder="e.g. John Doe" required />
+                </div>
+                
+                <!-- Phone -->
+                <div class="form-group">
+                    <label for="servicePhone">Phone Number *</label>
+                    <input type="tel" id="servicePhone" placeholder="080-XXX-XXXX" required />
+                </div>
+                
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="serviceEmail">Email Address</label>
+                    <input type="email" id="serviceEmail" placeholder="john@example.com" />
+                </div>
+                
+                <!-- Service Type -->
+                <div class="form-group">
+                    <label for="serviceType">Service Type *</label>
+                    <select id="serviceType" required>
+                        <option value="">Select a service...</option>
+                        <option value="phone-repair">Phone Repair</option>
+                        <option value="laptop-repair">Laptop Repair</option>
+                        <option value="accessory-repair">Accessory Repair</option>
+                        <option value="screen-guard">Screen Guard Installation</option>
+                        <option value="data-recovery">Data Recovery</option>
+                        <option value="software-update">Software Update & Setup</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <!-- Device Brand -->
+                <div class="form-group">
+                    <label for="deviceBrand">Device Brand</label>
+                    <select id="deviceBrand">
+                        <option value="">Select brand...</option>
+                        <option value="tecno">Tecno</option>
+                        <option value="itel">Itel</option>
+                        <option value="redmi">Redmi</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="apple">Apple / iPhone</option>
+                        <option value="hp">HP (Laptop)</option>
+                        <option value="dell">Dell (Laptop)</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <!-- Date -->
+                <div class="form-group">
+                    <label for="serviceDate">Preferred Date *</label>
+                    <input type="date" id="serviceDate" required />
+                </div>
+                
+                <!-- Time -->
+                <div class="form-group">
+                    <label for="serviceTime">Preferred Time</label>
+                    <select id="serviceTime">
+                        <option value="">Select time...</option>
+                        <option value="morning">Morning (9am - 12pm)</option>
+                        <option value="afternoon">Afternoon (12pm - 4pm)</option>
+                        <option value="evening">Evening (4pm - 7pm)</option>
+                    </select>
+                </div>
+                
+                <!-- Description -->
+                <div class="form-group">
+                    <label for="serviceDescription">Issue Description *</label>
+                    <textarea id="serviceDescription" rows="4" placeholder="Describe the problem you're having..." required></textarea>
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 18px; padding: 16px;">
+                    📩 Book Service
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- ✅ BOOKING CONFIRMATION MODAL            -->
+    <!-- ========================================= -->
+    <div id="bookingModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: var(--bg); max-width: 500px; width: 90%; padding: 40px; border-radius: 20px; text-align: center; position: relative;">
+            <span style="font-size: 64px;">✅</span>
+            <h2 style="margin: 16px 0 8px;">Booking Confirmed! 🎉</h2>
+            <p style="color: var(--text-secondary);">
+                Your repair booking has been received.
+            </p>
+            <div style="background: var(--bg-secondary); padding: 16px; border-radius: 8px; margin: 16px 0; text-align: left;">
+                <p style="font-size: 14px;"><strong>📋 Service:</strong> <span id="bookingService">-</span></p>
+                <p style="font-size: 14px;"><strong>📅 Date:</strong> <span id="bookingDate">-</span></p>
+                <p style="font-size: 14px;"><strong>⏰ Time:</strong> <span id="bookingTime">-</span></p>
+                <p style="font-size: 14px;"><strong>👤 Customer:</strong> <span id="bookingCustomer">-</span></p>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+                We'll contact you within 24 hours to confirm your booking.
+            </p>
+            <a href="index.html" class="btn-primary" style="margin-top: 20px; display: inline-block;">
+                🏠 Back to Home
+            </a>
+            <button onclick="closeBookingModal()" style="position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text);">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+
+    <!-- Services Page Specific JavaScript -->
+    <script>
+        // ============================================
+        // SERVICES - BOOKING FORM
+        // ============================================
+
+        // Set default date to today + 2 days
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart
+            loadCart();
+            updateCartCount();
+            
+            // Set default date
+            const dateInput = document.getElementById('serviceDate');
+            if (dateInput) {
+                const today = new Date();
+                const twoDaysLater = new Date(today);
+                twoDaysLater.setDate(today.getDate() + 2);
+                
+                const year = twoDaysLater.getFullYear();
+                const month = String(twoDaysLater.getMonth() + 1).padStart(2, '0');
+                const day = String(twoDaysLater.getDate()).padStart(2, '0');
+                dateInput.value = `${year}-${month}-${day}`;
+                dateInput.min = `${year}-${month}-${day}`;
+            }
+            
+            // Hamburger menu
+            document.getElementById('hamburger')?.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.toggle('open');
+            });
+            
+            console.log('🔧 Services page loaded!');
+        });
+
+        // ============================================
+        // 📩 BOOK SERVICE
+        // ============================================
+
+        function bookService(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('serviceName').value.trim();
+            const phone = document.getElementById('servicePhone').value.trim();
+            const email = document.getElementById('serviceEmail').value.trim();
+            const serviceType = document.getElementById('serviceType').value;
+            const deviceBrand = document.getElementById('deviceBrand').value;
+            const date = document.getElementById('serviceDate').value;
+            const time = document.getElementById('serviceTime').value;
+            const description = document.getElementById('serviceDescription').value.trim();
+            
+            // Validate required fields
+            if (!name || !phone || !serviceType || !date || !description) {
+                alert('Please fill in all required fields (*).');
+                return;
+            }
+            
+            // Get service name for display
+            const serviceMap = {
+                'phone-repair': 'Phone Repair',
+                'laptop-repair': 'Laptop Repair',
+                'accessory-repair': 'Accessory Repair',
+                'screen-guard': 'Screen Guard Installation',
+                'data-recovery': 'Data Recovery',
+                'software-update': 'Software Update & Setup',
+                'other': 'Other'
+            };
+            
+            const timeMap = {
+                'morning': 'Morning (9am - 12pm)',
+                'afternoon': 'Afternoon (12pm - 4pm)',
+                'evening': 'Evening (4pm - 7pm)'
+            };
+            
+            const serviceDisplay = serviceMap[serviceType] || serviceType;
+            const timeDisplay = timeMap[time] || time || 'Not specified';
+            
+            // Show confirmation modal
+            document.getElementById('bookingService').textContent = serviceDisplay;
+            document.getElementById('bookingDate').textContent = date;
+            document.getElementById('bookingTime').textContent = timeDisplay;
+            document.getElementById('bookingCustomer').textContent = name;
+            
+            // Show the modal
+            document.getElementById('bookingModal').style.display = 'flex';
+            
+            // Log booking (for demo)
+            console.log('🔧 New Booking!', {
+                customer: { name, phone, email },
+                service: serviceDisplay,
+                deviceBrand: deviceBrand || 'Not specified',
+                date: date,
+                time: timeDisplay,
+                description: description
+            });
+            
+            // Reset form
+            document.getElementById('serviceBookingForm').reset();
+            
+            // Reset date to default
+            const dateInput = document.getElementById('serviceDate');
+            if (dateInput) {
+                const today = new Date();
+                const twoDaysLater = new Date(today);
+                twoDaysLater.setDate(today.getDate() + 2);
+                const year = twoDaysLater.getFullYear();
+                const month = String(twoDaysLater.getMonth() + 1).padStart(2, '0');
+                const day = String(twoDaysLater.getDate()).padStart(2, '0');
+                dateInput.value = `${year}-${month}-${day}`;
+            }
+        }
+
+        // ============================================
+        // ❌ CLOSE MODAL
+        // ============================================
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').style.display = 'none';
+        }
+
+        // Make functions globally available
+        window.bookService = bookService;
+        window.closeBookingModal = closeBookingModal;
+    </script>
+
+</body>
+</html>

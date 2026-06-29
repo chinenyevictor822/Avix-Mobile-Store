@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile — Customer Reviews</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html" class="active">Reviews</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 📄 PAGE HEADER                          -->
+    <!-- ========================================= -->
+    <section class="container page-header">
+        <h1>⭐ Customer Reviews</h1>
+        <p>What our customers say about Avix Mobile</p>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📊 REVIEW SUMMARY                        -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 0 0 20px;">
+        <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; background: var(--bg-secondary); border-radius: 16px; padding: 32px; border: 1px solid var(--border);">
+            <!-- Left: Average Rating -->
+            <div style="text-align: center; display: flex; flex-direction: column; justify-content: center;">
+                <span style="font-size: 64px; font-weight: 700; color: var(--brand-orange);">4.5</span>
+                <div style="font-size: 28px; letter-spacing: 4px; margin: 8px 0;">⭐ ⭐ ⭐ ⭐ ⭐</div>
+                <p style="color: var(--text-secondary); font-size: 14px;">Based on 14 reviews</p>
+                <p style="color: var(--text-secondary); font-size: 13px; margin-top: 8px;">★★★★★ 4.5 ⭐ from Google</p>
+            </div>
+            
+            <!-- Right: Rating Breakdown -->
+            <div>
+                <p style="font-weight: 600; margin-bottom: 12px;">Rating Breakdown</p>
+                <!-- 5 Stars -->
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                    <span style="font-size: 14px; min-width: 50px;">5 ⭐</span>
+                    <div style="flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                        <div style="width: 70%; height: 100%; background: var(--brand-orange); border-radius: 4px;"></div>
+                    </div>
+                    <span style="font-size: 13px; color: var(--text-secondary); min-width: 40px;">70%</span>
+                </div>
+                <!-- 4 Stars -->
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                    <span style="font-size: 14px; min-width: 50px;">4 ⭐</span>
+                    <div style="flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                        <div style="width: 20%; height: 100%; background: var(--brand-orange); border-radius: 4px;"></div>
+                    </div>
+                    <span style="font-size: 13px; color: var(--text-secondary); min-width: 40px;">20%</span>
+                </div>
+                <!-- 3 Stars -->
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                    <span style="font-size: 14px; min-width: 50px;">3 ⭐</span>
+                    <div style="flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                        <div style="width: 5%; height: 100%; background: var(--brand-orange); border-radius: 4px;"></div>
+                    </div>
+                    <span style="font-size: 13px; color: var(--text-secondary); min-width: 40px;">5%</span>
+                </div>
+                <!-- 2 Stars -->
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+                    <span style="font-size: 14px; min-width: 50px;">2 ⭐</span>
+                    <div style="flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                        <div style="width: 3%; height: 100%; background: var(--brand-orange); border-radius: 4px;"></div>
+                    </div>
+                    <span style="font-size: 13px; color: var(--text-secondary); min-width: 40px;">3%</span>
+                </div>
+                <!-- 1 Star -->
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 14px; min-width: 50px;">1 ⭐</span>
+                    <div style="flex: 1; height: 8px; background: var(--border); border-radius: 4px; overflow: hidden;">
+                        <div style="width: 2%; height: 100%; background: var(--brand-orange); border-radius: 4px;"></div>
+                    </div>
+                    <span style="font-size: 13px; color: var(--text-secondary); min-width: 40px;">2%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 💬 REVIEW CARDS                         -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 20px 0 40px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+            <h2 style="font-size: 24px;">📋 What People Are Saying</h2>
+            <span style="color: var(--text-secondary); font-size: 14px;">14 reviews</span>
+        </div>
+
+        <!-- Review 1 -->
+        <div class="review-card fade-up">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p style="margin: 8px 0; line-height: 1.6; color: var(--text-secondary);">
+                "Awesome service. Fixed my laptop quickly. Replaced the battery and charger with original products. Affordable rates for phones, screen guards, pouches, chargers, pedometers and different technological devices. They also sell new & refurbished phones and laptops. Highly recommend."
+            </p>
+            <div class="name">— Ese Okereka</div>
+            <div class="date">📍 Port Harcourt · 5 years ago</div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="review-card fade-up" style="animation-delay: 0.1s;">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p style="margin: 8px 0; line-height: 1.6; color: var(--text-secondary);">
+                "Best mobile phone shop in Port Harcourt. Awesome place. Great customer service and quality products."
+            </p>
+            <div class="name">— Godspower Clement</div>
+            <div class="date">📍 Port Harcourt · 6 years ago</div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="review-card fade-up" style="animation-delay: 0.2s;">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p style="margin: 8px 0; line-height: 1.6; color: var(--text-secondary);">
+                "It was great, good customer service. Thanks to the management."
+            </p>
+            <div class="name">— Victoria Duruike</div>
+            <div class="date">📍 Port Harcourt · 7 years ago</div>
+        </div>
+
+        <!-- Review 4 -->
+        <div class="review-card fade-up" style="animation-delay: 0.3s;">
+            <div class="stars">⭐⭐⭐⭐</div>
+            <p style="margin: 8px 0; line-height: 1.6; color: var(--text-secondary);">
+                "Great selection of phones at good prices. Got my Tecno Camon 20 here and it's been working perfectly. Staff were helpful and friendly."
+            </p>
+            <div class="name">— Adeola Johnson</div>
+            <div class="date">📍 Port Harcourt · 2 years ago</div>
+        </div>
+
+        <!-- Review 5 -->
+        <div class="review-card fade-up" style="animation-delay: 0.4s;">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p style="margin: 8px 0; line-height: 1.6; color: var(--text-secondary);">
+                "I've been buying from Avix for years. They always have the best deals on Samsung phones. The refurbished ones are great value!"
+            </p>
+            <div class="name">— Michael Obi</div>
+            <div class="date">📍 Port Harcourt · 3 years ago</div>
+        </div>
+
+        <!-- Review 6 -->
+        <div class="review-card fade-up" style="animation-delay: 0.5s;">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p style="margin: 8px 0; line-height: 1.6; color: var(--text-secondary);">
+                "Fixed my iPhone screen in less than 2 hours. Quality work and fair price. I'll definitely come back."
+            </p>
+            <div class="name">— Chinyere Eze</div>
+            <div class="date">📍 Port Harcourt · 1 year ago</div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- ✍️ WRITE A REVIEW FORM                   -->
+    <!-- ========================================= -->
+    <section style="background: var(--bg-secondary); padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; background: var(--bg-card); padding: 40px; border-radius: 16px; border: 1px solid var(--border);">
+                <h2 style="text-align: center; font-size: 28px; margin-bottom: 8px;">✍️ Write a Review</h2>
+                <p style="text-align: center; color: var(--text-secondary); margin-bottom: 32px;">
+                    Share your experience with Avix Mobile
+                </p>
+                
+                <form id="reviewForm" onsubmit="submitReview(event)">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="reviewName">Your Name *</label>
+                        <input type="text" id="reviewName" placeholder="e.g. John Doe" required />
+                    </div>
+                    
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="reviewEmail">Email Address</label>
+                        <input type="email" id="reviewEmail" placeholder="john@example.com" />
+                    </div>
+                    
+                    <!-- Rating -->
+                    <div class="form-group">
+                        <label>Rating *</label>
+                        <div style="display: flex; gap: 8px; font-size: 32px; cursor: pointer; flex-wrap: wrap;">
+                            <span onclick="setRating(1)" id="star1" style="cursor: pointer; transition: var(--transition);">☆</span>
+                            <span onclick="setRating(2)" id="star2" style="cursor: pointer; transition: var(--transition);">☆</span>
+                            <span onclick="setRating(3)" id="star3" style="cursor: pointer; transition: var(--transition);">☆</span>
+                            <span onclick="setRating(4)" id="star4" style="cursor: pointer; transition: var(--transition);">☆</span>
+                            <span onclick="setRating(5)" id="star5" style="cursor: pointer; transition: var(--transition);">☆</span>
+                            <span id="ratingDisplay" style="font-size: 16px; color: var(--text-secondary); margin-left: 12px; display: flex; align-items: center;">Select a rating</span>
+                        </div>
+                        <input type="hidden" id="reviewRating" value="0" required />
+                    </div>
+                    
+                    <!-- Review Text -->
+                    <div class="form-group">
+                        <label for="reviewText">Your Review *</label>
+                        <textarea id="reviewText" rows="4" placeholder="Tell us about your experience with Avix Mobile..." required></textarea>
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 18px; padding: 16px;">
+                        📩 Submit Review
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- ✅ REVIEW CONFIRMATION MODAL             -->
+    <!-- ========================================= -->
+    <div id="reviewModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: var(--bg); max-width: 500px; width: 90%; padding: 40px; border-radius: 20px; text-align: center; position: relative;">
+            <span style="font-size: 64px;">🙏</span>
+            <h2 style="margin: 16px 0 8px;">Thank You!</h2>
+            <p style="color: var(--text-secondary);">
+                Your review has been submitted successfully.
+            </p>
+            <div style="background: var(--bg-secondary); padding: 16px; border-radius: 8px; margin: 16px 0;">
+                <p style="font-size: 14px;"><strong>⭐ Rating:</strong> <span id="reviewSubmittedStars">-</span></p>
+                <p style="font-size: 14px;"><strong>👤 By:</strong> <span id="reviewSubmittedName">-</span></p>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+                Your feedback helps us improve our service.
+            </p>
+            <button onclick="closeReviewModal()" class="btn-primary" style="margin-top: 20px; display: inline-block;">
+                Close
+            </button>
+            <button onclick="closeReviewModal()" style="position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text);">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+
+    <!-- Reviews Page Specific JavaScript -->
+    <script>
+        // ============================================
+        // REVIEWS - RATING STARS
+        // ============================================
+
+        let selectedRating = 0;
+
+        function setRating(rating) {
+            selectedRating = rating;
+            document.getElementById('reviewRating').value = rating;
+            
+            // Update stars
+            for (let i = 1; i <= 5; i++) {
+                const star = document.getElementById('star' + i);
+                if (i <= rating) {
+                    star.textContent = '⭐';
+                } else {
+                    star.textContent = '☆';
+                }
+            }
+            
+            // Update display text
+            const display = document.getElementById('ratingDisplay');
+            const labels = {
+                1: '1 star - Poor',
+                2: '2 stars - Fair',
+                3: '3 stars - Good',
+                4: '4 stars - Very Good',
+                5: '5 stars - Excellent!'
+            };
+            display.textContent = labels[rating] || 'Select a rating';
+            display.style.color = 'var(--brand-orange)';
+        }
+
+        // ============================================
+        // 📩 SUBMIT REVIEW
+        // ============================================
+
+        function submitReview(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('reviewName').value.trim();
+            const email = document.getElementById('reviewEmail').value.trim();
+            const rating = parseInt(document.getElementById('reviewRating').value);
+            const reviewText = document.getElementById('reviewText').value.trim();
+            
+            // Validate
+            if (!name || !reviewText) {
+                alert('Please fill in your name and review.');
+                return;
+            }
+            
+            if (rating === 0) {
+                alert('Please select a rating.');
+                return;
+            }
+            
+            // Show confirmation modal
+            const stars = '⭐'.repeat(rating) + '☆'.repeat(5 - rating);
+            document.getElementById('reviewSubmittedStars').textContent = stars + ' (' + rating + '/5)';
+            document.getElementById('reviewSubmittedName').textContent = name;
+            
+            document.getElementById('reviewModal').style.display = 'flex';
+            
+            // Log review (for demo)
+            console.log('⭐ New Review!', {
+                name: name,
+                email: email || 'Not provided',
+                rating: rating,
+                review: reviewText
+            });
+            
+            // Reset form
+            document.getElementById('reviewForm').reset();
+            selectedRating = 0;
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById('star' + i).textContent = '☆';
+            }
+            document.getElementById('ratingDisplay').textContent = 'Select a rating';
+            document.getElementById('ratingDisplay').style.color = 'var(--text-secondary)';
+        }
+
+        // ============================================
+        // ❌ CLOSE MODAL
+        // ============================================
+
+        function closeReviewModal() {
+            document.getElementById('reviewModal').style.display = 'none';
+        }
+
+        // ============================================
+        // INITIALIZE
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart
+            loadCart();
+            updateCartCount();
+            
+            // Hamburger menu
+            document.getElementById('hamburger')?.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.toggle('open');
+            });
+            
+            console.log('⭐ Reviews page loaded!');
+        });
+
+        // Make functions globally available
+        window.setRating = setRating;
+        window.submitReview = submitReview;
+        window.closeReviewModal = closeReviewModal;
+    </script>
+
+</body>
+</html>

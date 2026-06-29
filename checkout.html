@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile — Checkout</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+           <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog.html">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 📄 PAGE HEADER                          -->
+    <!-- ========================================= -->
+    <section class="container page-header">
+        <h1>📋 Checkout</h1>
+        <p>Fill in your details to complete your order</p>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📝 CHECKOUT FORM + ORDER SUMMARY         -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 20px 0 60px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+            
+            <!-- LEFT: Billing Form -->
+            <div>
+                <div style="background: var(--bg-secondary); padding: 32px; border-radius: 16px; border: 1px solid var(--border);">
+                    <h3 style="margin-bottom: 24px;">👤 Your Details</h3>
+                    
+                    <form id="checkoutForm" onsubmit="placeOrder(event)">
+                        <!-- Full Name -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" placeholder="e.g. John Doe" required />
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" placeholder="john@example.com" required />
+                        </div>
+                        
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" placeholder="080-XXX-XXXX" required />
+                        </div>
+                        
+                        <!-- Address -->
+                        <div class="form-group">
+                            <label for="address">Delivery Address</label>
+                            <textarea id="address" rows="3" placeholder="Street, Landmark, City (Port Harcourt)"></textarea>
+                            <p style="font-size: 12px; color: var(--text-light); margin-top: 4px;">
+                                If you selected delivery, please provide your full address.
+                            </p>
+                        </div>
+                        
+                        <!-- Order Notes -->
+                        <div class="form-group">
+                            <label for="notes">Order Notes (Optional)</label>
+                            <textarea id="notes" rows="2" placeholder="Special instructions..."></textarea>
+                        </div>
+                        
+                        <!-- Pickup / Delivery Info -->
+                        <div style="background: var(--bg-card); padding: 16px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 20px;">
+                            <p style="font-size: 14px;">
+                                <strong>📍 Delivery Method:</strong> 
+                                <span id="checkoutDeliveryMethod" style="color: var(--brand-orange);">Pickup</span>
+                            </p>
+                            <p style="font-size: 14px; color: var(--text-secondary);">
+                                You can change this in your cart.
+                            </p>
+                        </div>
+                        
+                        <!-- Place Order Button -->
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; font-size: 18px; padding: 16px;">
+                            ✅ Place Order
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- RIGHT: Order Summary -->
+            <div>
+                <div style="background: var(--bg-secondary); padding: 32px; border-radius: 16px; border: 1px solid var(--border); position: sticky; top: 100px;">
+                    <h3 style="margin-bottom: 24px;">📦 Order Summary</h3>
+                    
+                    <!-- Cart Items -->
+                    <div id="checkoutCartItems" style="margin-bottom: 16px;">
+                        <!-- Items will be rendered here -->
+                    </div>
+                    
+                    <hr style="border-color: var(--border); margin: 16px 0;" />
+                    
+                    <!-- Totals -->
+                    <div style="display: flex; justify-content: space-between; padding: 6px 0;">
+                        <span style="color: var(--text-secondary);">Subtotal</span>
+                        <span id="checkoutSubtotal">₦0</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 6px 0;">
+                        <span style="color: var(--text-secondary);">🚚 Delivery Fee</span>
+                        <span id="checkoutDeliveryFee">₦0</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding: 12px 0; font-weight: 700; font-size: 20px; border-top: 2px solid var(--border); margin-top: 8px;">
+                        <span>Total</span>
+                        <span id="checkoutTotal" style="color: var(--brand-orange);">₦0</span>
+                    </div>
+                    
+                    <!-- Delivery Note -->
+                    <p style="font-size: 12px; color: var(--text-light); margin-top: 16px; text-align: center;">
+                        🔒 Your information is safe and secure.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- ✅ ORDER CONFIRMATION MODAL              -->
+    <!-- ========================================= -->
+    <div id="orderModal" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); z-index: 9999; align-items: center; justify-content: center;">
+        <div style="background: var(--bg); max-width: 500px; width: 90%; padding: 40px; border-radius: 20px; text-align: center; position: relative;">
+            <span style="font-size: 64px;">✅</span>
+            <h2 style="margin: 16px 0 8px;">Order Placed! 🎉</h2>
+            <p style="color: var(--text-secondary);">
+                Your order has been placed successfully.
+            </p>
+            <div style="background: var(--bg-secondary); padding: 16px; border-radius: 8px; margin: 16px 0;">
+                <p style="font-size: 14px;"><strong>Order #:</strong> <span id="orderNumber">AVX-0000</span></p>
+                <p style="font-size: 14px;"><strong>Total:</strong> <span id="orderTotal">₦0</span></p>
+                <p style="font-size: 14px;"><strong>Delivery:</strong> <span id="orderDelivery">Pickup</span></p>
+            </div>
+            <p style="font-size: 13px; color: var(--text-secondary);">
+                We'll contact you shortly via phone or email.
+            </p>
+            <a href="index.html" class="btn-primary" style="margin-top: 20px; display: inline-block;">
+                🏠 Back to Home
+            </a>
+            <button onclick="closeModal()" style="position: absolute; top: 16px; right: 20px; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text);">
+                ✕
+            </button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+
+    <!-- Checkout Page Specific JavaScript -->
+    <script>
+        // ============================================
+        // CHECKOUT - LOAD CART AND RENDER SUMMARY
+        // ============================================
+
+        // Load cart data and show summary
+        function loadCheckoutSummary() {
+            const items = getCartItemsWithDetails();
+            const container = document.getElementById('checkoutCartItems');
+            
+            // Check if cart is empty
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div style="text-align: center; padding: 20px 0;">
+                        <p style="color: var(--text-secondary);">Your cart is empty.</p>
+                        <a href="shop.html" class="btn-primary" style="margin-top: 12px; display: inline-block; font-size: 14px; padding: 10px 24px;">
+                            🛍️ Shop Now
+                        </a>
+                    </div>
+                `;
+                document.getElementById('checkoutSubtotal').textContent = '₦0';
+                document.getElementById('checkoutDeliveryFee').textContent = '₦0';
+                document.getElementById('checkoutTotal').textContent = '₦0';
+                document.getElementById('checkoutDeliveryMethod').textContent = 'Pickup';
+                return;
+            }
+            
+            // Build items HTML
+            let html = '';
+            items.forEach(item => {
+                html += `
+                    <div style="display: flex; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--border); align-items: center;">
+                        <img src="${item.product.image}" alt="${item.product.name}" style="width: 48px; height: 48px; object-fit: contain; background: var(--bg-card); border-radius: 8px; padding: 4px;" />
+                        <div style="flex: 1;">
+                            <p style="font-size: 14px; font-weight: 600;">${item.product.name}</p>
+                            <p style="font-size: 12px; color: var(--text-secondary);">Qty: ${item.quantity}</p>
+                        </div>
+                        <span style="font-weight: 600; color: var(--brand-orange);">${formatPrice(item.subtotal)}</span>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+            
+            // Update totals
+            const subtotal = getCartTotal();
+            const deliveryFee = getDeliveryFee();
+            const total = getCartTotalWithDelivery();
+            
+            document.getElementById('checkoutSubtotal').textContent = formatPrice(subtotal);
+            document.getElementById('checkoutDeliveryFee').textContent = formatPrice(deliveryFee);
+            document.getElementById('checkoutTotal').textContent = formatPrice(total);
+            
+            // Show delivery method
+            const hasDelivery = hasDeliveryItems();
+            document.getElementById('checkoutDeliveryMethod').textContent = hasDelivery ? 'Delivery (₦2,000)' : 'Pickup (Free)';
+        }
+
+        // ============================================
+        // 📝 PLACE ORDER
+        // ============================================
+
+        function placeOrder(event) {
+            event.preventDefault();
+            
+            // Check if cart is empty
+            const items = getCartItemsWithDetails();
+            if (items.length === 0) {
+                alert('Your cart is empty! Please add some products first.');
+                return;
+            }
+            
+            // Get form data
+            const fullName = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const address = document.getElementById('address').value.trim();
+            const notes = document.getElementById('notes').value.trim();
+            
+            // Validate required fields
+            if (!fullName || !email || !phone) {
+                alert('Please fill in all required fields (Name, Email, Phone).');
+                return;
+            }
+            
+            // Validate email format
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Generate order number
+            const orderNumber = 'AVX-' + String(Math.floor(Math.random() * 9000 + 1000));
+            
+            // Get order summary
+            const total = getCartTotalWithDelivery();
+            const hasDelivery = hasDeliveryItems();
+            const deliveryMethod = hasDelivery ? 'Delivery (₦2,000)' : 'Pickup';
+            
+            // Show confirmation modal
+            document.getElementById('orderNumber').textContent = orderNumber;
+            document.getElementById('orderTotal').textContent = formatPrice(total);
+            document.getElementById('orderDelivery').textContent = deliveryMethod;
+            
+            // Show the modal
+            document.getElementById('orderModal').style.display = 'flex';
+            
+            // Clear the cart
+            clearCart();
+            
+            // Update cart count
+            updateCartCount();
+            
+            // Log order (for demo)
+            console.log('✅ Order Placed!', {
+                orderNumber: orderNumber,
+                customer: { fullName, email, phone, address, notes },
+                items: items,
+                total: total,
+                deliveryMethod: deliveryMethod
+            });
+        }
+
+        // ============================================
+        // ❌ CLOSE MODAL
+        // ============================================
+
+        function closeModal() {
+            document.getElementById('orderModal').style.display = 'none';
+        }
+
+        // ============================================
+        // INITIALIZE
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart
+            loadCart();
+            updateCartCount();
+            
+            // Load checkout summary
+            loadCheckoutSummary();
+            
+            // Hamburger menu
+            document.getElementById('hamburger')?.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.toggle('open');
+            });
+            
+            console.log('📋 Checkout page loaded!');
+        });
+
+        // Make functions globally available
+        window.placeOrder = placeOrder;
+        window.closeModal = closeModal;
+        window.loadCheckoutSummary = loadCheckoutSummary;
+    </script>
+
+</body>
+</html>

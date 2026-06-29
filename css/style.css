@@ -1,0 +1,619 @@
+/* ============================================
+   AVIX MOBILE ACCESSORIES - MAIN STYLES
+   Brand Colors: Black, Orange, White + Gold accent
+   ============================================ */
+
+/* ---------- CSS VARIABLES ---------- */
+:root {
+    /* Light Mode */
+    --bg: #FFFFFF;
+    --bg-secondary: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --text: #1A1A1A;
+    --text-secondary: #6B7280;
+    --text-light: #9CA3AF;
+    
+    /* 🟠 AVIX BRAND COLORS */
+    --brand-black: #0A0A0A;
+    --brand-orange: #FF6B00;
+    --brand-orange-dark: #E85A00;
+    --brand-orange-light: #FF8A33;
+    --brand-white: #FFFFFF;
+    
+    /* Gold accent for premium feel */
+    --accent: #D4AF37;
+    --accent-hover: #C5A030;
+    
+    --border: #E5E7EB;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.12);
+    --radius: 16px;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Refurbished Badges */
+    --grade-a: #D4AF37;
+    --grade-b: #C0C0C0;
+    --grade-c: #CD7F32;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+    --bg: #0A0A0A;        /* Brand black */
+    --bg-secondary: #141414;
+    --bg-card: #1A1A1A;
+    --text: #F9FAFB;
+    --text-secondary: #9CA3AF;
+    --text-light: #6B7280;
+    --accent: #FF8A33;    /* Lighter orange for dark mode */
+    --accent-hover: #FF6B00;
+    --border: #2A2A2A;
+    --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- RESET & BASE ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    transition: var(--transition);
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ============================================
+   🎨 AVIX LOGO STYLES
+   ============================================ */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.logo .avix {
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: var(--brand-orange);
+    position: relative;
+}
+
+.logo .avix .letter-i {
+    color: var(--brand-white);
+    background: var(--brand-black);
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+.logo .avix .dot-i {
+    display: none; /* Hide the dot - not needed */
+}
+
+
+.logo .mobile {
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--brand-orange);
+    font-weight: 600;
+    margin-top: -2px;
+    text-transform: uppercase;
+}
+
+/* Black background for logo */
+.logo-wrapper {
+    background: var(--brand-black);
+    padding: 10px 24px 12px;
+    border-radius: 12px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+/* ============================================
+   🟠 BUTTONS (Orange accent)
+   ============================================ */
+
+.btn-primary {
+    background: var(--brand-orange);
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary:hover {
+    background: var(--brand-orange-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 107, 0, 0.35);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 2px solid var(--border);
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn-secondary:hover {
+    border-color: var(--brand-orange);
+    color: var(--brand-orange);
+}
+
+/* ============================================
+   🧭 NAVBAR
+   ============================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    transition: var(--transition);
+}
+
+.navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo inside navbar */
+.navbar .logo-wrapper {
+    background: var(--brand-black);
+    padding: 6px 16px 8px;
+    border-radius: 10px;
+}
+
+.navbar .logo .avix {
+    font-size: 24px;
+}
+
+.navbar .logo .mobile {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--brand-orange);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--brand-orange);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.cart-icon:hover {
+    color: var(--brand-orange);
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--brand-orange);
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--text);
+    transition: var(--transition);
+    padding: 4px;
+}
+
+.dark-toggle:hover {
+    color: var(--brand-orange);
+    transform: rotate(20deg);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+}
+
+.hamburger span {
+    width: 28px;
+    height: 2px;
+    background: var(--text);
+    transition: var(--transition);
+}
+
+/* ============================================
+   🏠 HERO SECTION (Orange accent)
+   ============================================ */
+
+.hero {
+    padding: 80px 0 60px;
+    background: var(--bg-secondary);
+    border-radius: 0 0 40px 40px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(255, 107, 0, 0.05) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 52px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+}
+
+.hero-content h1 span {
+    color: var(--brand-orange);
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 32px;
+    max-width: 480px;
+}
+
+.hero-badges {
+    display: flex;
+    gap: 24px;
+    margin-top: 32px;
+    flex-wrap: wrap;
+}
+
+.hero-badges span {
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-image img {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* ============================================
+   📦 PRODUCT CARDS
+   ============================================ */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 60px;
+}
+
+.product-card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-card .image-wrapper {
+    position: relative;
+    padding-top: 100%;
+    background: var(--bg-secondary);
+    overflow: hidden;
+}
+
+.product-card .image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.product-card:hover .image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Badges */
+.product-card .badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    z-index: 2;
+}
+
+.badge-refurbished {
+    background: var(--brand-orange);
+    color: #FFFFFF;
+}
+
+.badge-grade-a {
+    background: var(--grade-a);
+    color: #1A1A1A;
+}
+
+.badge-grade-b {
+    background: var(--grade-b);
+    color: #1A1A1A;
+}
+
+.badge-grade-c {
+    background: var(--grade-c);
+    color: #FFFFFF;
+}
+
+.badge-new {
+    background: #22C55E;
+    color: #FFFFFF;
+}
+
+.product-card .info {
+    padding: 16px 20px 20px;
+}
+
+.product-card .info .brand {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+.product-card .info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 4px 0 8px;
+    line-height: 1.3;
+}
+
+.product-card .info .pricing {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.product-card .info .pricing .original {
+    font-size: 14px;
+    color: var(--text-light);
+    text-decoration: line-through;
+}
+
+.product-card .info .pricing .sale {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--brand-orange);
+}
+
+.product-card .add-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    border: 2px solid var(--brand-orange);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--brand-orange);
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.product-card .add-btn:hover {
+    background: var(--brand-orange);
+    color: #FFFFFF;
+}
+
+/* ============================================
+   📱 RESPONSIVE
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-content p {
+        margin: 0 auto 32px;
+    }
+    
+    .hero-badges {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg);
+        padding: 20px 24px;
+        border-bottom: 1px solid var(--border);
+        gap: 16px;
+    }
+    
+    .nav-links.open {
+        display: flex;
+    }
+    
+    .hamburger {
+        display: flex;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 36px;
+    }
+    
+    .navbar .logo .avix {
+        font-size: 20px;
+    }
+    
+    .navbar .logo .mobile {
+        font-size: 10px;
+    }
+    
+    .navbar .logo-wrapper {
+        padding: 4px 12px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+    
+    .product-card .info h3 {
+        font-size: 14px;
+    }
+    
+    .product-card .info .pricing .sale {
+        font-size: 15px;
+    }
+}

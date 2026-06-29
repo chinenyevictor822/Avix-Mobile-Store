@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avix Mobile — Blog & News</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+    <!-- ========================================= -->
+    <!-- 🧭 NAVIGATION BAR                        -->
+    <!-- ========================================= -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-wrapper">
+    <div class="logo">
+        <span class="avix">
+            A V <span class="letter-i">I</span> X
+        </span>
+        <span class="mobile">MOBILE</span>
+    </div>
+</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
+                <a href="cart.html" class="cart-icon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- 📄 PAGE HEADER                          -->
+    <!-- ========================================= -->
+    <section class="container page-header">
+        <h1>📰 Blog & News</h1>
+        <p>Stay updated with the latest from Avix Mobile</p>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📰 BLOG POSTS                            -->
+    <!-- ========================================= -->
+    <section class="container" style="padding: 20px 0 40px;">
+        
+        <!-- Blog Post 1 -->
+        <div class="blog-card fade-up">
+            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&h=300&fit=crop" alt="New Phones" />
+            <div>
+                <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                    <span>📅 January 15, 2026</span>
+                    <span>🏷️ New Arrivals</span>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">🔥 New Phones Just Arrived!</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                    We're excited to announce the arrival of the latest Tecno Camon 20, 
+                    Samsung Galaxy A54, and Redmi Note 12! Come visit our store or 
+                    order online for delivery within Port Harcourt.
+                </p>
+                <a href="#" style="color: var(--brand-orange); font-weight: 600; text-decoration: none; transition: var(--transition);" 
+                   onclick="alert('📱 Full article: New phones available now at Avix Mobile! Visit our shop to see them all.'); return false;">
+                    Read More →
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card fade-up" style="animation-delay: 0.1s;">
+            <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop" alt="Charging Tips" />
+            <div>
+                <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                    <span>📅 January 8, 2026</span>
+                    <span>🏷️ Tips & Tricks</span>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">⚡ How to Make Your Phone Battery Last Longer</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                    Tired of your phone dying by noon? Here are 5 simple tips to extend 
+                    your battery life: turn down brightness, close unused apps, and use 
+                    our premium fast chargers. Visit our store for original batteries!
+                </p>
+                <a href="#" style="color: var(--brand-orange); font-weight: 600; text-decoration: none; transition: var(--transition);" 
+                   onclick="alert('🔋 Battery tips: 1. Reduce brightness 2. Close unused apps 3. Use original chargers 4. Turn off Bluetooth 5. Keep phone cool. Visit Avix for quality batteries!'); return false;">
+                    Read More →
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card fade-up" style="animation-delay: 0.2s;">
+            <img src="https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=400&h=300&fit=crop" alt="Screen Guards" />
+            <div>
+                <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                    <span>📅 December 20, 2025</span>
+                    <span>🏷️ Products</span>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">🛡️ Why You Need a Screen Guard Today</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                    A good screen guard can save you thousands in repair costs. We offer 
+                    tempered glass, privacy, and blue light filter screen guards for all 
+                    phone models. Installation is free when you buy from Avix!
+                </p>
+                <a href="#" style="color: var(--brand-orange); font-weight: 600; text-decoration: none; transition: var(--transition);" 
+                   onclick="alert('🛡️ Screen guards protect your phone! We have tempered glass, privacy, and blue light filters. Free installation at Avix Mobile.'); return false;">
+                    Read More →
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card fade-up" style="animation-delay: 0.3s;">
+            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&h=300&fit=crop" alt="Refurbished Phones" />
+            <div>
+                <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                    <span>📅 December 5, 2025</span>
+                    <span>🏷️ Refurbished</span>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">♻️ New Refurbished Stock Available!</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                    We've just received a fresh batch of refurbished Samsung Galaxy S21, 
+                    Redmi Note 11, and Tecno Camon 19 phones. All fully tested and graded 
+                    A, B, or C. Great quality at affordable prices!
+                </p>
+                <a href="#" style="color: var(--brand-orange); font-weight: 600; text-decoration: none; transition: var(--transition);" 
+                   onclick="alert('♻️ New refurbished phones! Samsung S21, Redmi Note 11, Tecno Camon 19. Graded A, B, C. Visit our shop for great deals!'); return false;">
+                    Read More →
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card fade-up" style="animation-delay: 0.4s;">
+            <img src="https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=400&h=300&fit=crop" alt="Accessories" />
+            <div>
+                <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                    <span>📅 November 15, 2025</span>
+                    <span>🏷️ Accessories</span>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">🎧 Top 5 Must-Have Phone Accessories</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                    From wireless earbuds to power banks, we've got everything you need. 
+                    Here are our top 5 accessories: 1) Wireless earbuds, 2) Power bank, 
+                    3) Fast charger, 4) Leather pouch, 5) Phone stand. Shop now!
+                </p>
+                <a href="#" style="color: var(--brand-orange); font-weight: 600; text-decoration: none; transition: var(--transition);" 
+                   onclick="alert('🎧 Top 5 accessories: 1. Wireless Earbuds 2. Power Bank 3. Fast Charger 4. Leather Pouch 5. Phone Stand. All available at Avix Mobile!'); return false;">
+                    Read More →
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="blog-card fade-up" style="animation-delay: 0.5s;">
+            <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=400&h=300&fit=crop" alt="Laptop Repair" />
+            <div>
+                <div style="display: flex; gap: 16px; font-size: 13px; color: var(--text-secondary); margin-bottom: 8px;">
+                    <span>📅 October 28, 2025</span>
+                    <span>🏷️ Services</span>
+                </div>
+                <h3 style="font-size: 20px; margin-bottom: 8px;">💻 Quick Laptop Repair Services</h3>
+                <p style="color: var(--text-secondary); line-height: 1.6; margin-bottom: 12px;">
+                    Did you know we offer same-day laptop repairs? From battery replacement 
+                    to screen fixes, our expert team can get your laptop working like new. 
+                    Visit us today for a free diagnostic check!
+                </p>
+                <a href="#" style="color: var(--brand-orange); font-weight: 600; text-decoration: none; transition: var(--transition);" 
+                   onclick="alert('💻 Laptop repairs available! Battery replacement, screen fixes, charger repair. Free diagnostic check at Avix Mobile. Book now!'); return false;">
+                    Read More →
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📧 NEWSLETTER SIGNUP                     -->
+    <!-- ========================================= -->
+    <section style="background: var(--bg-secondary); padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container" style="max-width: 600px; text-align: center;">
+            <span style="font-size: 48px;">✉️</span>
+            <h2 style="font-size: 28px; margin: 12px 0 8px;">Subscribe to Our Newsletter</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 24px;">
+                Get the latest updates on new arrivals, promotions, and tech tips.
+            </p>
+            <form id="newsletterForm" onsubmit="subscribeNewsletter(event)" style="display: flex; gap: 12px; flex-wrap: wrap; justify-content: center;">
+                <input 
+                    type="email" 
+                    id="newsletterEmail" 
+                    placeholder="Enter your email" 
+                    required 
+                    style="flex: 1; min-width: 200px; padding: 14px 20px; border: 1px solid var(--border); border-radius: 50px; background: var(--bg); color: var(--text); font-size: 15px;"
+                />
+                <button type="submit" class="btn-primary" style="padding: 14px 32px;">
+                    Subscribe ✉️
+                </button>
+            </form>
+            <p style="font-size: 13px; color: var(--text-light); margin-top: 12px;">
+                We'll never spam you. Unsubscribe anytime.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================= -->
+    <!-- 📝 FOOTER                               -->
+    <!-- ========================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div>
+                <h4 style="font-size: 20px;">
+                    <span style="color: var(--brand-orange);">Avix</span> 
+                    <span style="color: var(--text-secondary);">Mobile</span>
+                </h4>
+                <p style="margin-top: 8px;">
+                    Premium phones, accessories, and repairs in Port Harcourt.
+                    New & refurbished devices from top brands.
+                </p>
+                <p style="margin-top: 8px;">📍 Port Harcourt, Rivers State, Nigeria</p>
+                <p>📞 080-XXX-XXXX</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <a href="shop.html">Shop All</a><br />
+                <a href="services.html">Repair Services</a><br />
+                <a href="about.html">About Us</a><br />
+                <a href="reviews.html">Reviews</a>
+            </div>
+            <div>
+                <h4>Brands</h4>
+                <a href="shop.html?brand=Tecno">Tecno</a><br />
+                <a href="shop.html?brand=Itel">Itel</a><br />
+                <a href="shop.html?brand=Redmi">Redmi</a><br />
+                <a href="shop.html?brand=Samsung">Samsung</a>
+            </div>
+            <div>
+                <h4>Support</h4>
+                <a href="services.html">Book a Repair</a><br />
+                <a href="cart.html">View Cart</a><br />
+                <a href="checkout.html">Checkout</a>
+            </div>
+            <div class="bottom">
+                &copy; 2026 Avix Mobile Accessories. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================= -->
+    <!-- 📜 JAVASCRIPT FILES                     -->
+    <!-- ========================================= -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/dark-mode.js"></script>
+
+    <!-- Blog Page Specific JavaScript -->
+    <script>
+        // ============================================
+        // BLOG - NEWSLETTER SUBSCRIPTION
+        // ============================================
+
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('newsletterEmail').value.trim();
+            
+            if (!email) {
+                alert('Please enter your email address.');
+                return;
+            }
+            
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Show success message
+            alert('✅ Thank you for subscribing! You\'ll receive our latest updates.');
+            
+            // Reset form
+            document.getElementById('newsletterForm').reset();
+            
+            // Log subscription (for demo)
+            console.log('📧 New Newsletter Subscription:', email);
+        }
+
+        // ============================================
+        // INITIALIZE
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load cart
+            loadCart();
+            updateCartCount();
+            
+            // Hamburger menu
+            document.getElementById('hamburger')?.addEventListener('click', function() {
+                document.getElementById('navLinks').classList.toggle('open');
+            });
+            
+            console.log('📰 Blog page loaded!');
+        });
+
+        // Make functions globally available
+        window.subscribeNewsletter = subscribeNewsletter;
+    </script>
+
+</body>
+</html>
